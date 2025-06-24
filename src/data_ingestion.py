@@ -35,7 +35,7 @@ class DataIngestion:
                     blob = bucket.blob(file_name)
                     blob.download_to_filename(destination_file_name)
 
-                    data = pd.read_csv(destination_file_name , nrows=10000000)
+                    data = pd.read_csv(destination_file_name , nrows=5000000)
                     data.to_csv(destination_file_name, index=False)
                     logger.info(f"Downloaded {file_name} to {destination_file_name}")
 

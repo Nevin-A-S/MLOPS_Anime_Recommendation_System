@@ -3,6 +3,4 @@ numpy
 setuptools
 google-cloud-storage
 pyyaml
-torch
-scikit-learn
-wordcloud
+tensorflow
