@@ -4,3 +4,4 @@ logs
 __pycache__
 artifacts
 *.h5
+.env
