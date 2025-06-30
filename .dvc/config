@@ -1,0 +1,4 @@
+[core]
+    remote = main_data
+['remote "main_data"']
+    url = gs://dvc-anime-recommendation-system/

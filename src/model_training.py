@@ -137,6 +137,10 @@ class ModelTrainer:
             joblib.dump(user_weights,USER_WEIGHTS_PATH)
             joblib.dump(anime_weights,ANIME_WEIGHTS_PATH)
 
+            self.experiment.log_asset(MODEL_PATH)
+            self.experiment.log_asset(ANIME_WEIGHTS_PATH)
+            self.experiment.log_asset(USER_WEIGHTS_PATH)
+
             logger.info("User and anime weights saved sucessfully")
 
         except Exception as e:

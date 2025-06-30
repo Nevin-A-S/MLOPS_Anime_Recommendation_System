@@ -2,6 +2,10 @@
 venv
 logs
 __pycache__
-artifacts
 *.h5
 .env
+artifacts/model
+artifacts/model_checkpoint
+artifacts/processsed
+artifacts/raw
+artifacts/weights
