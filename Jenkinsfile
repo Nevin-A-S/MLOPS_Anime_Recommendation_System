@@ -3,8 +3,8 @@ pipeline{
     agent any
     
     environment {
-        VENV_DIR = 'venv',
-        GCP_PROJECT = 'eastern-period-463504-e2',
+        VENV_DIR = 'venv'
+        GCP_PROJECT = 'eastern-period-463504-e2'
         GCLOUD_PATH = "/var/jenkins_home/google-cloud-sdk/bin"
         KUBECTL_AUTH_PLUGIN = "/usr/lib/google-cloud-sdk/bin"
     }
