@@ -91,7 +91,7 @@ pipeline{
                         gcloud auth activate-service-account --key-file=${GOOGLE_APPLICATION_CREDENTIALS}
                         gcloud config set project ${GCP_PROJECT}
                         gcloud container clusters get-credentials anime-cluster --region us-central1
-                        kubectl apply -f deployment.yaml
+                        kubectl apply --request-timeout=2m -f deployment.yaml
                         '''
                     }
                 }
