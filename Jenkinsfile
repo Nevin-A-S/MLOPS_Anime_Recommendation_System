@@ -50,7 +50,7 @@ pipeline{
         stage('Build and Push Image to GCR'){
             steps{
                 withCredentials([
-                    file(credentialsId:'gcp-key' , variable: 'GOOGLE_APPLICATION_CREDENTIALS' )
+                    file(credentialsId:'gcp-key' , variable: 'GOOGLE_APPLICATION_CREDENTIALS' ),
                     string(credentialsId: 'comet-ml', variable: 'COMET_ML_KEY')
                 ]){
                     script{
@@ -81,7 +81,7 @@ pipeline{
         stage('Deploying to Kubernetes'){
             steps{
                 withCredentials([
-                    file(credentialsId:'gcp-key' , variable: 'GOOGLE_APPLICATION_CREDENTIALS' )
+                    file(credentialsId:'gcp-key' , variable: 'GOOGLE_APPLICATION_CREDENTIALS' ),
                     string(credentialsId: 'comet-ml', variable: 'COMET_ML_KEY')
                 ]){
                     script{
